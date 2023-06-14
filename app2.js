@@ -31,6 +31,8 @@ function passArray(selectedCategory) {
         return ["Byte", "Kilobyte"];
         case "fuel-economy":
         return ["Kilometer_per_liter", "Miles_per_gallon"];
+        case "mass":
+        return ["kilogram","gram", "ton"];
         default:
         return [];
     }
@@ -67,6 +69,21 @@ const conversionFactorList = {
     Kilobyte: {
         Byte: 1000,
         Kilobyte: 1
+    },
+    kilogram:{
+        gram: 1000,
+        kilogram: 1,
+        ton: 0.001
+    },
+    gram: {
+        kilogram: 0.001,
+        gram: 1,
+        ton: 0.000001
+    },
+    ton:{
+        kilogram: 0.001,
+        gram: 1000000,
+        ton: 1
     }
 };
 
@@ -155,8 +172,3 @@ function convert(metricUnit1, metricUnit2, inputValue, input, otherInput) {
 //         return [];
 //     }
 // }
-
-
-
-
-
