@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container w-fit bg-gray-200 shadow-lg p-8 border border-gray-300 m-6 px-8 py-6 rounded">
+        <h1 class="text-2xl font-bold mb-4 text-gray-600">Convert unites</h1>
+
+        <div class="flex-col items-center mb-4">
+        <label for="category" class="mr-2">Select a category:</label>
+        <select id="category" class="border border-gray-300 px-2 py-1 rounded w-50">
+            <option value="mass">Mass</option>
+            <option value="length">Length</option>
+            <option value="digital-storage">Digital Storage</option>
+            <option value="fuel-economy">Fuel Economy</option>
+        </select>
+        </div>
+
+        <div class="flex items-center mb-4">
+        <div class="flex-col">
+            <input type="text" id="input1" class="border border-gray-300 px-2 py-1 rounded">
+            <select id="unit1" class="border border-gray-300 ml-2 px-2 py-1 rounded">
+                <option value=""> unit 1</option>
+                <option value="">kilogram</option>
+                <option value="">gram</option>
+                <option value="">tonne</option>
+            </select>
+        </div>
+
+        <span class="mx-2">=</span>
+
+        <div class="flex-col">
+            <input type="text" id="input2" class="border border-gray-300 px-2 py-1 rounded">
+            <select id="unit2" class="border border-gray-300 ml-2 px-2 py-1 rounded">
+                <option value="">unit 2</option>
+                <option value="">kilogram</option>
+                <option value="">gram</option>
+                <option value="">tonne</option>
+            </select>
+        </div>
+        </br>
+        </div>
+        <div class="text-blue-600 font-bold text-lg">Formula</div>
+        <span id="formula"></span>
+
+    </div>
+</body>
